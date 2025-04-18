@@ -12,7 +12,7 @@ const PartnerLogoSlider = () => {
   return (
     <div className="bg-white py-10 overflow-hidden">
       <h2 className="text-2xl font-bold mb-2 text-center">Our Partners</h2>
-      <div className="w-20 h-1 bg-[#8b4513] mx-auto mb-10 rounded"></div>
+      <div className="w-20 h-1 bg-[#FBAC20] mx-auto mb-10 rounded"></div>
 
       <div className="relative w-full overflow-hidden">
         <div className="flex w-max animate-slide">
@@ -31,7 +31,6 @@ const PartnerLogoSlider = () => {
         </div>
       </div>
 
-      {/* 🔧 Smooth loop animation */}
       <style>
         {`
           @keyframes slide {
