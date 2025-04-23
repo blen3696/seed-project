@@ -22,7 +22,7 @@ const AppointmentForm = () => {
     // Send to backend (placeholder for now)
     console.log('Appointment submitted:', appointment);
 
-    // Reset after submission (optional)
+    // Reset after submission
     setSelectedDate('');
     setSelectedHour('');
   };
