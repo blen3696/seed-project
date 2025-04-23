@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/S.E.E.D/',
+  base: '/seed-project/',
 })

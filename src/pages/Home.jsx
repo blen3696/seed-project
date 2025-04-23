@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import heroImg from '../assets/hero.jpg'
 import profile from '../assets/image.jpg'
 import bgImg from '../assets/hero.jpg'
-import logo from '../assets/logo.png'
-import { Carousel } from 'react-responsive-carousel'
-import PaymentSection from './PaymentSection'
-import PartnerLogoSlider from './PartnerLogoSlider'
+import PaymentSection from '../components/PaymentSection'
+import PartnerLogoSlider from '../components/PartnerLogoSlider'
 
 import {
   FaEnvelope,
@@ -18,6 +16,12 @@ import {
   FaInstagram,
   FaTwitter
 } from 'react-icons/fa'
+import ProductCarousel from '../components/Products'
+import AppointmentForm from '../components/AppointmentForm'
+import TestimonialsSlider from '../components/TestimonialsSlider'
+import QRCodePage from '../components/QRCode'
+import Footer from '../components/Footer'
+import ServicesSlider from '../components/ServicesSlider'
 
 
 const Home = () => {
@@ -125,106 +129,21 @@ const Home = () => {
 
       </div>
 
- 
-      {/* 🔹 Services Slider Section */}
-      <div className="bg-white px-4 sm:px-6 lg:px-8 py-8">
-      <h2 className="text-2xl font-bold mb-2 text-center">Our Services</h2>
-      <div className="w-20 h-1 bg-[#FBAC20] mx-auto mb-6 rounded"></div>
+    <ProductCarousel />
+    <ServicesSlider />
 
-      <div className="max-w-6xl mx-auto mb-12">
-        <Carousel
-          autoPlay
-          infiniteLoop
-          interval={4000}
-          showThumbs={false}
-          showStatus={false}
-          showIndicators={false}
-          swipeable
-          emulateTouch
-          showArrows={true}
-          className="rounded-lg">
-          {[
-            
-              [
-                {
-                  title: 'Website Marketing',
-                  desc: 'We create high-performing websites that serve as your brand’s digital front door—designed to convert, optimized for search engines, and tailored to your business goals.',
-                },
-                {
-                  title: 'Content Marketing',
-                  desc: 'From blog posts to videos and infographics, we help craft compelling content that educates, engages, and turns audiences into loyal customers.',
-                },
-              ],
-              [
-                {
-                  title: 'Advocacy Marketing',
-                  desc: 'We build and nurture brand advocates by leveraging satisfied customers and key stakeholders to authentically promote your products or services.',
-                },
-                {
-                  title: 'Data-Driven Marketing',
-                  desc: 'Make smarter marketing decisions through analytics. We use real-time data to track performance and refine strategies for maximum ROI.',
-                },
-              ],
-            
-            
-          ].map((group, idx) => (
-            <div
-              key={idx}
-              className="flex flex-wrap justify-center gap-6 px-4 sm:px-8"
-            >
-              {group.map((service, i) => (
-                <div
-                  key={i}
-                  className="w-full sm:w-[80%] md:w-[45%] lg:w-[40%] xl:w-[35%] border border-[#FBAC20] bg-white p-6 rounded-lg shadow-md"
-                >
-                  <h3 className="text-xl font-semibold mb-2 text-center">{service.title}</h3>
-                  <p className="text-center text-gray-600">{service.desc}</p>
-                </div>
-              ))}
-            </div>
-          ))}
-        </Carousel>
-      </div>
+    <AppointmentForm />
+
+    <TestimonialsSlider />
+    <QRCodePage />
+
+    <div id="payment-section">
+      <PaymentSection />
     </div>
 
+    <PartnerLogoSlider />
 
-
-        <PaymentSection />
-        <PartnerLogoSlider />
-
-
-      {/* footer Section */}
-        <footer className="bg-[#f9f9f9] border-t border-gray-300 h-[25vh] py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-              <div className="mb-4 md:mb-0">
-                <img src={logo} alt="" className='w-30'/>
-                <h2 className="text-xl font-bold text-[#FBAC20]">ALAZARE SHIFERAW</h2>
-                <p className="text-sm text-gray-600">General Manager</p>
-              </div>
-
-    
-              <div className="flex space-x-6 text-[#FBAC20] text-xl">
-                <a href="https://web.facebook.com/people/SEED-git/100092510080285/" target="_blank" className="hover:scale-120 transition transform duration-300">
-                  <FaFacebook/>
-                </a>
-                <a href="#" target="_blank" className="hover:scale-120 transition transform duration-300">
-                  <FaInstagram />
-                </a>
-                <a href="#"  target="_blank" className="hover:scale-120 transition transform duration-300">
-                  <FaTwitter />
-                </a>
-                <a href="https://www.linkedin.com/company/seed7/" target="_blank" className="hover:scale-120 transition transform duration-300">
-                  <FaLinkedin />
-                </a>
-              </div>
-
-              <div className="text-sm text-gray-500 mt-4 md:mt-0">
-              Copyright &copy; {new Date().getFullYear()} | Powered by S.E.E.D
-              </div>
-            </div>
-          </div>
-        </footer>
+    <Footer />
 
     </div>
 

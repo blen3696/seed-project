@@ -1,5 +1,5 @@
 {
-  "homepage": "https://blen3696.github.io/S.E.E.D",
+  "homepage": "https://github.com/blen3696/seed-project",
   "name": "contact-page",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,6 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
-   
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
@@ -17,6 +16,8 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {

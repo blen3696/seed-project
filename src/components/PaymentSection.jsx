@@ -24,7 +24,7 @@ export default function PaymentSection() {
   };
 
   return (
-    <div className="text-center my-10 px-4 sm:px-6 md:px-8">
+    <div className="text-center py-10 px-4 sm:px-6 md:px-8">
       <h2 className="text-2xl sm:text-3xl font-bold mb-1">Payment</h2>
       <div className="w-20 h-1 bg-[#FBAC20] mx-auto mb-3 rounded"></div>
       <p className="text-lg font-semibold mb-6">Choose your payment method</p>
@@ -33,7 +33,7 @@ export default function PaymentSection() {
         {paymentOptions.map((option, index) => (
           <button
             key={index}
-            className="flex items-center justify-center bg-gray-100 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-lg transition"
+            className="flex items-center justify-center bg-gray-100 p-4 sm:p-5 rounded-lg shadow-md hover:scale-95 transition-transform duration-300"
             onClick={() => setSelectedPayment(option)}
           >
             <img src={option.logo} alt={option.name} className="h-6 sm:h-8 mr-3" />
@@ -71,7 +71,7 @@ export default function PaymentSection() {
                 {selectedPayment.bankNumber}
               </span>
               <FaRegCopy
-                className="cursor-pointer text-gray-600 hover:text-[#8b4513]"
+                className="cursor-pointer text-gray-600 hover:text-[#FBAC20]"
                 onClick={() => handleCopy(selectedPayment.bankNumber)}
               />
             </div>
